@@ -97,16 +97,16 @@
 		CE16B1A22281330A00721F5F /* TLChartTool */ = {
 			isa = PBXGroup;
 			children = (
-				CE16B1A32281330A00721F5F /* TLChartSingleHistogramView.m */,
-				CE16B1A42281330A00721F5F /* TLChartRateView.m */,
-				CE16B1A52281330A00721F5F /* TLChartDoubleHistogramView.m */,
-				CE16B1A62281330A00721F5F /* TLChartTableView.h */,
-				CE16B1A72281330A00721F5F /* TLChartRateView1.m */,
-				CE16B1A82281330A00721F5F /* TLChartSingleHistogramView.h */,
-				CE16B1A92281330A00721F5F /* TLChartDoubleHistogramView.h */,
 				CE16B1AA2281330A00721F5F /* TLChartRateView.h */,
-				CE16B1AB2281330A00721F5F /* TLChartTableView.m */,
+				CE16B1A42281330A00721F5F /* TLChartRateView.m */,
 				CE16B1AC2281330A00721F5F /* TLChartRateView1.h */,
+				CE16B1A72281330A00721F5F /* TLChartRateView1.m */,
+				CE16B1A62281330A00721F5F /* TLChartTableView.h */,
+				CE16B1AB2281330A00721F5F /* TLChartTableView.m */,
+				CE16B1A82281330A00721F5F /* TLChartSingleHistogramView.h */,
+				CE16B1A32281330A00721F5F /* TLChartSingleHistogramView.m */,
+				CE16B1A92281330A00721F5F /* TLChartDoubleHistogramView.h */,
+				CE16B1A52281330A00721F5F /* TLChartDoubleHistogramView.m */,
 			);
 			path = TLChartTool;
 			sourceTree = "<group>";

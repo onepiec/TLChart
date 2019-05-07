@@ -20,7 +20,7 @@
 
 - (NSMutableArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = [[NSMutableArray alloc]initWithArray:@[@"饼图0",@"饼图1",@"表图",@"单柱状图",@"双柱状图"]];
+        _dataArr = [[NSMutableArray alloc]initWithArray:@[@"饼图/速率图0",@"饼图/速率图1",@"表图",@"单柱状图",@"双柱状图"]];
     }
     return _dataArr;
 }

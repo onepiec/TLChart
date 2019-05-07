@@ -27,7 +27,7 @@
         _lineWidth          = 1;
         _lineColor          = [UIColor blackColor];
         
-        _title              = @"柱状图";
+        _title              = @"饼图/速率图";
         _titleFont          = 15;
         _titleColor         = [UIColor redColor];
         

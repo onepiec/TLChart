@@ -15,6 +15,7 @@
 
 @interface ViewController1 ()
 
+@property (nonatomic ,strong)UILabel                    *lab;
 @property (nonatomic ,strong)TLChartRateView            *rateView;
 @property (nonatomic ,strong)TLChartRateView1           *rateView1;
 @property (nonatomic ,strong)TLChartTableView           *tableView;
@@ -42,16 +43,21 @@
     [btn setTitle:@"刷新数据" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    self.lab = [UILabel new];
+    self.lab.frame = CGRectMake(0, TLDeviceHeight -200, TLDeviceWidth, 50);
+    self.lab.textAlignment = 1;
+    [self.view addSubview:self.lab];
 }
 - (void)click:(UIButton *)btn{
     
-    if ([@"饼图0" isEqualToString:self.title]) {
+    if ([@"饼图/速率图0" isEqualToString:self.title]) {
         
         self.rateView.arcData = @"0.7";
         [self.rateView reloadData];
         
         
-    }else if ([@"饼图1" isEqualToString:self.title]){
+    }else if ([@"饼图/速率图1" isEqualToString:self.title]){
         
         self.rateView1.arcData = 0.9;
         [self.rateView1 reloadData];
@@ -88,11 +94,11 @@
 }
 - (void)initUI{
     
-    if ([@"饼图0" isEqualToString:self.title]) {
+    if ([@"饼图/速率图0" isEqualToString:self.title]) {
         
         [self initTLChartRateView0];
         
-    }else if ([@"饼图1" isEqualToString:self.title]){
+    }else if ([@"饼图/速率图1" isEqualToString:self.title]){
         
         [self initTLChartRateView1];
         
@@ -139,9 +145,12 @@
     self.tableView.verHeightProArr = @[@(90),@(70),@(80),@(60)];
     [self.view addSubview:self.tableView];
     
+    WS(weakSelf);
     self.tableView.clickBlock = ^(NSInteger indexX, NSInteger indexY) {
+        SS(strongSelf);
         
         NSLog(@"%ld------%ld",(long)indexX,(long)indexY);
+        strongSelf.lab.text = [NSString stringWithFormat:@"点击了：(X:%ld-----Y:%ld)",(long)indexX,(long)indexY];
     };
 }
 - (void)initTLChartSingleHistogramView{
@@ -160,8 +169,12 @@
     self.singleHistogramView.dataColorArr = @[color0,color1,color2];
     [self.view addSubview:self.singleHistogramView];
     
+    WS(weakSelf);
     self.singleHistogramView.clickBlock = ^(NSInteger index) {
+        SS(strongSelf);
+        
         NSLog(@"----%ld",(long)index);
+        strongSelf.lab.text = [NSString stringWithFormat:@"点击了：----%ld",(long)index];
     };
 }
 - (void)initTLChartDoubleHistogramView{
@@ -181,9 +194,13 @@
     self.doubleHistogramView.dataColor0Arr = @[color0,color0,color0];
     self.doubleHistogramView.dataColor1Arr = @[color1,color1,color1];
     [self.view addSubview:self.doubleHistogramView];
+    
+    WS(weakSelf);
     self.doubleHistogramView.clickBlock = ^(NSInteger secIndex, NSInteger rowIndex) {
+        SS(strongSelf);
         
         NSLog(@"%ld------%ld",(long)secIndex,(long)rowIndex);
+        strongSelf.lab.text = [NSString stringWithFormat:@"点击了：(数据源:%ld---row:%ld)",(long)secIndex,(long)rowIndex];
     };
     
 }
