@@ -138,10 +138,11 @@
     NSArray *arr3 = @[@"王老五",@"7",@"0",@"",@"70"];
     NSArray *dataArr = @[arr0,arr1,arr2,arr3];
     
+    CGFloat width = TLDeviceWidth -20;
     self.tableView = [TLChartTableView new];
-    self.tableView.frame = CGRectMake(10, 150 +NavBarHeight, 400, 300);
+    self.tableView.frame = CGRectMake(10, 150 +NavBarHeight, width, 300);
     self.tableView.dataArr = dataArr;
-    self.tableView.horWidthProArr = @[@(80),@(80),@(70),@(90),@(80)];
+    self.tableView.horWidthProArr = @[@(width *0.2),@(width *0.15),@(width *0.25),@(width *0.1),@(width *0.3)];
     self.tableView.verHeightProArr = @[@(90),@(70),@(80),@(60)];
     [self.view addSubview:self.tableView];
     

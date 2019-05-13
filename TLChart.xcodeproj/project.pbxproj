@@ -332,6 +332,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = USY78CHE7U;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TLChart/PrefixHeader.pch";
 				INFOPLIST_FILE = TLChart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -349,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = USY78CHE7U;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TLChart/PrefixHeader.pch";
 				INFOPLIST_FILE = TLChart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
